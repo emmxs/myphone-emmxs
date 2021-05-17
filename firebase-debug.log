@@ -1,0 +1,47 @@
+[debug] [2021-05-17T19:55:02.568Z] ----------------------------------------------------------------------
+[debug] [2021-05-17T19:55:02.572Z] Command:       C:\Windows\node.js\node.exe C:\Users\emmxs\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-05-17T19:55:02.572Z] CLI Version:   9.10.2
+[debug] [2021-05-17T19:55:02.573Z] Platform:      win32
+[debug] [2021-05-17T19:55:02.573Z] Node Version:  v14.17.0
+[debug] [2021-05-17T19:55:02.575Z] Time:          Mon May 17 2021 14:55:02 GMT-0500 (hora de verano central)
+[debug] [2021-05-17T19:55:02.575Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-05-17T19:55:02.594Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-05-17T19:55:02.594Z] > authorizing via signed-in user (emmxsjd@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\emmxs
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using hola-8308e. 
+[debug] [2021-05-17T19:55:08.933Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hola-8308e [none]
+[debug] [2021-05-17T19:55:09.286Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hola-8308e 403
+[debug] [2021-05-17T19:55:09.286Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hola-8308e {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2021-05-17T19:55:09.287Z] HTTP Error: 403, The caller does not have permission
+[debug] [2021-05-17T19:55:09.501Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\emmxs\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\emmxs\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:238:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Client.request (C:\Users\emmxs\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\emmxs\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.doSetup [as project] (C:\Users\emmxs\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:77:27)
+    at async init (C:\Users\emmxs\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
+[error] 
+[error] Error: Failed to get Firebase project hola-8308e. Please make sure the project exists and your account has permission to access it.
